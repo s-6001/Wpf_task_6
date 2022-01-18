@@ -14,7 +14,7 @@ namespace Wpf_task_6
         }
         class WeatherControl
         {
-            public static readonly DependencyProperty TemperatureProperty =
+            public static readonly DependencyProperty TemperatureProperty = //свойство зависимости
                 DependencyProperty.Register(
                     nameof(Temperature),
                     typeof(string),
@@ -24,7 +24,7 @@ namespace Wpf_task_6
             private string windDirection;
             private int windSpeed;
             private int rainfall;
-            public int Temperature
+            public int Temperature  //температура
             {
                 get
                 {
@@ -40,9 +40,9 @@ namespace Wpf_task_6
                         this.temperature = value;
                 }
             }
-            public string WindDirection { get; set; }
-            public int WindSpeed { get; set; }
-            private enum Rainfall : int { солнечно, облачно, дождь, снег }
+            public string WindDirection { get; set; }   //направление ветра
+            public int WindSpeed { get; set; }  //скорость ветра
+            private enum Rainfall : int { солнечно, облачно, дождь, снег }  //осадки
             public WeatherControl(int temperature, string windDirection, int windSpeed, int rainfall)
             {
                 this.temperature = temperature;
